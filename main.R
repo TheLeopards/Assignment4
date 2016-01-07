@@ -20,16 +20,16 @@ is.leap <- function(x) {
 	} 
 		# check whether "x" is a leap year
 		else if (x %% 4 != 0) {
-			common <- x %% 4 != 0
-			stop (common)
-	} else if (x %% 100 == 0) {
-			leap <- x%%100 == 0
-			stop(leap)
+			common <- x %% 4 == 0
+			return (common)
+	} else if (x %% 100 != 0) {
+			leap <- x%%100 != 0
+			return(leap)
 	} else if (x %% 400 != 0) {
-			common2 <- x %% 400 != 0
-			stop (common2)
-	} else
-	return("TRUE")
+			common2 <- x %% 400 == 0
+			return (common2)
+	} 
+	return(TRUE)
 }
 
-is.leap(2015)
+is.leap(2000)
