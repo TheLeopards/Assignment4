@@ -3,5 +3,5 @@
 
 #This function was created to determine whether a year is a leap year.
 
-source(~R/determine_leap_year.R)
+source('R/determine_leap_year.R')
 is.leap(2000)
